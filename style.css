@@ -24,7 +24,8 @@ li {
     background-color: white;
 }
 .logo {
-    width: 15%;
+    width: 10%;
+    margin-left: 5%;
 }
 .nav-links a {
     color: #00b4d8;
@@ -72,7 +73,7 @@ li {
 .page{
     text-align: center;
     background-color: #00b4d8;
-    height: 90vh;
+    height: 86vh;
 }
 .world{
     font-family: 'Bilbo Swash Caps', cursive;
@@ -92,7 +93,7 @@ li {
     border: 2px white solid;
     background-color: white;
 }
-.ghost-button-rounded-corners {
+.learn {
     display: inline-block;
     width: 200px;
     padding: 10px;
@@ -103,8 +104,9 @@ li {
     outline: none;
     text-decoration: none;
   }
-  .ghost-button-rounded-corners:hover,
-  .ghost-button-rounded-corners:active {
+  .learn:hover,
+  .learn:active {
     background-color: #fff;
     color: #00b4d8;
+    cursor: pointer;
   }
