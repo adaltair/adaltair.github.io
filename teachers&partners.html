@@ -2,18 +2,24 @@
 <head>
 <style>
     .body{
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-top: 0px;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 0px;
     }
     .text2{
         font-family: 'Montserrat', sans-serif;
         font-weight: normal;
         margin-top: 1px;
-        padding-left: 16px;
-        padding-right: 16px;
         position: relative;
         width: 100%;
+    }
+    .text3{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        margin-top: 1px;
+        position: relative;
+        width: 100%;
+        font-size: 18px;
     }
     .list_label{
         background: #eff8fa;
@@ -22,8 +28,8 @@
         font-weight: 700;
     }
     .a{
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 18px;
+        padding-right: 18px;
         position: relative;
         width: 100%;
         flex: 0 0 30%;
@@ -37,6 +43,16 @@
         margin-right: 0px;
         text-align: center!important;
     }
+    .p{
+        margin-bottom: 1rem;
+        margin-top: 0;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+    /* line */
     .subject-card-list-header{
         color: #001b1e;
         line-height: 1.5;
@@ -68,24 +84,154 @@
         font-weight: 700;
         line-height: 1.25;
         margin-bottom: 0.5rem;
-        margin-bottom: 0.5rem;
-        margin-top: 16px;
-        margin-left: 16px;
+        margin-top: 0px;
+        margin-left: 0px;
         margin-right: 0;
     }
-    .p{
-        margin-bottom: 1rem;
-        margin-top: 0;
-        display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
+
+    /* cards */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
     }
+
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+        background-color: #bbb;
+        color: black;
+    }
+
+    .flip-card-back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+    }
+    .padding{
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+    }
+    /* Cards JS */
+    .image {
+        position: relative;
+        width: 300px;
+        height: 200px;
+    }
+
+    .image__img {
+        display: block;
+        width: 100%;
+        height: 70%;
+    }
+    .image__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+        font-family: 'Quicksand', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+    .image__overlay--blur {
+        backdrop-filter: blur(5px);
+    }
+
+    .image__overlay--primary {
+        background: #0093FB;
+    }
+
+    .image__overlay > * {
+        transform: translateY(20px);
+        transition: transform 0.25s;
+    }
+
+    .image__overlay:hover {
+        opacity: 1;
+    }
+
+    .image__overlay:hover > * {
+        transform: translateY(0);
+    }
+
+    .image__title {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .image__description {
+        font-size: 1.25em;
+        margin-top: 0.25em;
+    }
+    .teacher{
+        padding-top: 20px;
+        display: flex; justify-content: space-around;
+    }
+
+    /* картинка на фоне */
+    .title {
+        padding-top: 100px;
+        padding-left: 20px;
+        font-size: 50px;
+        color: #000;
+    }
+    .title span {
+        display: inline;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
+        padding: 0 10px 0 0;
+        color: #FFFFFF;
+        line-height: 450px;
+        font-size: 75px;
+    }
+    .back-pic {
+        background: url(https://wallpaperaccess.com/full/6592911.jpg) 0 0 repeat;
+        background-size: cover;
+    }
+
 </style>
 </head>
 <body class="body">
-    <h1 class="text2">Schools and Partners</h1>
+    <div class="back-pic">
+        <h1 class="title">
+            <span>Partners and Teachers</span>
+        </h1>
+    </div>
+
+    <!-- <h1 class="text2">Schools and Partners</h1> -->
     <p class="text2">Bilim offers the highest quality online courses from institutions who share our commitment to excellence in teaching and learning.</p>
    
     <div class="row">
@@ -102,10 +248,388 @@
             <p class="p">enrollments across Bilim courses</p>
         </div>
     </div>
+    
     <h2 class="h5 subject-card-list-header">
         <span class="subject-card-list-text">
-            BILIM CHARTER MEMBERS
+            BILIM MEMBERS
         </span>
     </h2>
+    
+   
+    <div style="display: flex; justify-content: space-around;">
+        <div> 
+            <div style="padding-left: 160px;">
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="massachusetts.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">WEB</div>
+                            <p class="image__description">
+                            Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="harward (2).png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">JavaScript</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="berkeley.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="texacsystem.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                     </div>
+                    </div> 
+                </div>
+            </div>
+            <div style="padding-left: 160px;">
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="australian.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">WEB</div>
+                            <p class="image__description">
+                            Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="thehongkong.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">JavaScript</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="curtin.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="tudelft.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                     </div>
+                    </div> 
+                </div>
+            </div> 
+            <div style="padding-left: 160px;">
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="georgetown.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">WEB</div>
+                            <p class="image__description">
+                            Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="rwth.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">JavaScript</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="sorbonne.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="boston.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                     </div>
+                    </div> 
+                </div>
+            </div> 
+            <div style="padding-left: 160px;">
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="queensland.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">WEB</div>
+                            <p class="image__description">
+                            Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="adelaide.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">JavaScript</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="thehongkong.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="maryland.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                     </div>
+                    </div> 
+                </div>
+            </div> 
+            <div style="padding-left: 160px;">
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="arizona.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">WEB</div>
+                            <p class="image__description">
+                            Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="berklee.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">JavaScript</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="brown.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="caltech.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                     </div>
+                    </div> 
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="columbia.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                     </div>
+                    </div> 
+                </div>
+            </div> 
+            <div style="padding-left: 160px;">
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="cornell.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">WEB</div>
+                            <p class="image__description">
+                            Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="dartmouth.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">JavaScript</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:left;">
+                    <div class="image">
+                        <img class="image__img" src="iitbombay.png">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">SQL</div>
+                            <p class="image__description">
+                                Ali krasavchik.
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div> 
+    </div>
+    <h2 class="h5 subject-card-list-header">
+        <span class="subject-card-list-text">
+            BILIM TEACHER
+        </span>
+    </h2>
+
+    <div class="teacher">
+        <div style="float: left;" class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="duman.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Duman Telman</h1> 
+                    <p>Architect & Engineer</p> 
+                    <p>We love that guy</p>
+                </div>
+            </div>
+        </div>
+        <div style="float: left;" class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="aisaule.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Aisaule Bazarkulova</h1> 
+                    <p>Architect & Engineer</p> 
+                    <p>We love that guy</p>
+                </div>
+            </div>
+        </div>
+        <div style="float: left;" class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="kuka.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Mamay Kuanyshbek</h1> 
+                    <p>Architect & Engineer</p> 
+                    <p>We love that guy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="teacher">
+        <div style="float: left;" class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="ali2.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Ali krasavchik</h1> 
+                    <p>Architect & Engineer</p> 
+                    <p>We love that guy</p>
+                </div>
+            </div>
+        </div>
+        <div style="float: left;" class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="ruha.png" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Ruha macho</h1> 
+                    <p>Architect & Engineer</p> 
+                    <p>We love that guy</p>
+                </div>
+            </div>
+        </div>
+        <div style="float: left;" class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="kuka.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Mamay Kuanyshbek</h1> 
+                    <p>Architect & Engineer</p> 
+                    <p>We love that guy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding-top: 30px;">
+        <h2 class="h5 subject-card-list-header">
+            <span class="subject-card-list-text">
+                MORE ABOUT PARTNERING
+            </span>
+        </h2>
+    </div>
+    <p class="text3">Bilim regularly partners with many different types of organizations from all around the world - academic institutions (from large research universities to polytechnics and liberal arts colleges), non-profit institutions, national governments, non-governmental organizations (NGOs), and multinational corporations in connection with its MicroMasters™ program and other educational programs and related services.</p>
+    <p class="text3">Where there is strong mission alignment with Bilim and the ability to commit strategic, course content, and/or financial contributions back to the consortium, we are eager to hear from your institution on where it is today and where it is planning to go with online/blended learning and MOOCs. In turn, for participating member institutions in the MicroMasters program and other educational programs, Bilim offers its members a variety of technical, marketing, and educational services (i.e., training, onboarding, high-level program management, learner technical support, course strategy, design, build, run and re-run consultations involving data analytics, and so on).</p>
+    <P class="text3">if you are interested in partnering with Bilim to offer courses and programs, please visit partnerships.bilim.com.</P>
+    <P  class="text3">If you are a business or corporation interested in using Bilim to train and develop your employees, please visit business.bilim.com</P>
+
+    
 </body>
 </html>
