@@ -1,11 +1,215 @@
 <!DOCTYPE html>
 <html>
+    <head>
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="about_style.css">
+        <link rel="stylesheet" href="scrolldown_animation.css">
+        <link rel="stylesheet" href="scrolldown_button.css">
+        <link rel="stylesheet" href="counter.css">
 
-<title>Bilim.com</title>
-<link rel="shortcut icon" href="titlelogo.ico" />
 
-<body>
-<h1>About page </h1>
-<p>page number two</p>
-</body>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="SHORTCUT ICON" href="logosmall.png" type="image/x-icon">
+	<!--font bilbo-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
+	<!---->
+        <style>
+          .backdiv{
+            width: 80%;
+          }
+          .toptext{
+            margin: auto;
+            width: 80%;
+            font-size: 40px;
+            color: white;
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+          }
+          .fade-in3 {
+              animation: fadeIn ease 3s;
+              -webkit-animation: fadeIn ease 3s;
+              -moz-animation: fadeIn ease 3s;
+              -o-animation: fadeIn ease 3s;
+              -ms-animation: fadeIn ease 3s;
+          }
+
+          .fade-in5 {
+            animation: fadeIn ease 5s;
+            -webkit-animation: fadeIn ease 5s;
+            -moz-animation: fadeIn ease 5s;
+            -o-animation: fadeIn ease 5s;
+            -ms-animation: fadeIn ease 5s;
+          }
+
+          html {
+            scroll-behavior: smooth;
+          }
+
+          .section1{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white; 
+            /* background-image: linear-gradient(white, #00b4d8); */
+          }
+
+          .a1{
+            color: #006ba5;
+            text-decoration: none;
+            margin: auto;
+          }
+
+          /* FADE-IN TEXT */
+          @keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
+          @-moz-keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
+          @-webkit-keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
+          @-o-keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
+          @-ms-keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
+          /* FADE-IN TEXT */
+
+
+          
+          
+          
+
+
+        </style>
+
+        <!-- SCROLLDOWN ANIMATION -->
+        <script>
+          function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+              var windowHeight = window.innerHeight;
+              var elementTop = reveals[i].getBoundingClientRect().top;
+              var elementVisible = 150;
+
+              if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+              } else {
+                reveals[i].classList.remove("active");
+              }
+            }
+          }
+            window.addEventListener("scroll", reveal);
+          
+        </script>
+        <!-- SCROLLDOWN ANIMATION -->
+
+        <script type="text/javascript" src="scrolldown_button.js"></script>
+
+    </head>
+    
+
+    <title>Bilim</title>
+                <body>
+                    <nav class="navbar">
+                        <img class="logo" src="logo.png"/>
+                        <ul class="nav-links">
+                          <div class="menu">
+                            <li><a class= "navlink" href="index.html">MAIN</a></li>
+                            <li><a class= "navlink" href="about.html">ABOUT US</a></li>
+                            <li><a class= "navlink" href="courses.html">COURSES</a></li>
+                            <li><a class= "navlink" href="teachers&partners.html">TEACHERS</a></li>
+                            <li><a class= "navlink" href="contacts.html">CONTACTS</a></li>
+                          </div>
+                        </ul>
+                      </nav>
+
+                      <div class="page">
+                        <br><br>
+                        <h1 class="world">What is bilim?</h1>
+                        <hr class="hr">
+                        <br><br>
+                      
+                        <h3 class="toptext fade-in3">BILIM - is the best courses website that provides you the most useful and affordable courses on the internet
+                        </h3>
+                        <br><br><br><br><br><br><br><br><br>
+                        
+                        <h3 class="toptext fade-in5">More info</h3>
+                        
+                        
+                          <a href="#down" class="scroll-down" ></a>
+                        
+                      </div>
+
+
+                     
+                        
+
+
+                      
+                      <section id="down">
+                        <div class="container reveal" >
+                          <h2>Our courses</h2>
+                          <div class="text-container">
+                            <div class="text-box">
+                              <h3>Web-programming</h3>
+                              <p>
+                                Web programming refers to the writing and coding involved in Web development, which includes Web content,
+                                 Web client scripting and network security.
+                                 <p><a class="a1" href="web.html">Learn more ›</a></p>
+                              </p>
+                            </div>
+                            <div class="text-box">
+                              <h3>Database</h3>
+                              <p>
+                                Database management refers to the actions a business takes to manipulate and control data to meet 
+                                conditions throughout the entire data lifecycle. 
+                                <p><a class="a1" href="sql.html">Learn more ›</a></p>
+                              </p>
+                            </div>
+                            <div class="text-box">
+                              <h3>Java</h3>
+                              <p>
+                                Java is a high-level, class-based, object-oriented programming language that is designed to have as few 
+                                implementation dependencies as possible. 
+                                <p><a class="a1" href="java.html">Learn more ›</a></p>
+                              </p>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </section>
+
+                      <section class="section1">
+                      <section class="counters">
+                        <div class="container">
+                            <div>
+                                <i class="fab fa-youtube fa-4x"></i>
+                                <div class="counter" data-target="300000">0</div>
+                                <h3>Subscribers</h3>
+                            </div>
+                            <div>
+                                <i class="fab fa-twitter fa-4x"></i>
+                                <div class="counter" data-target="250000">0</div>
+                                <h3>Followers</h3>
+                            </div>
+                            <div>
+                                <i class="fab fa-facebook fa-4x"></i>
+                                <div class="counter" data-target="180000">0</div>
+                                <h3>Likes</h3>
+                            </div>
+                            <div>
+                                <i class="fab fa-linkedin fa-4x"></i>
+                                <div class="counter" data-target="90000">0</div>
+                                <h3>Connections</h3>
+                            </div>
+                        </div>
+                    </section>
+                  </section>
+                    <script src="js/functions.js"></script> 
+                  
+
+
+
+                </body>
 </html>
