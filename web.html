@@ -5,11 +5,11 @@
                 background-color: aqua;
             } */
             #rectangle {
-                width: 1400px;
+                width: 1500px;
                 height: 600px;
                 background: #90e0ef;
                 border-radius: 30px;
-                margin-left: 50px;
+                margin-left: 100px;
             }
             .h--1 {
                 font-weight: 700;
@@ -65,11 +65,127 @@
                 box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
                 background-position: 0 0;
             }
+            .teacher{
+                padding-top: 100px;
+                display: flex; justify-content: space-around;
+                margin: 80px;
+            }
+            .t--1 { 
+                font-weight: 700;
+                font-size: 28px;  
+                line-height: 24px;
+            }
+            .t--2 {
+                font-size: 22px;
+                line-height: 25px;
+                /* орграничить ширину текста */
+                max-width: 400px; 
+                word-wrap:break-word;
+            }
+            .t--3 { 
+                font-weight: 500;
+                font-size: 30px;  
+                line-height: 24px;
+            }
+            /* slider */
+            .img {
+                width: 100% !important;
+            }
+
+            .sim-slider {
+                max-width: 1000px;
+                min-width: 320px;
+                margin: 20px auto;
+                padding: 30px 50px;
+                border: 1px solid #ccd;
+                background-color: white;
+            }
+
+            /* General styles */
+            .sim-slider {
+                position: relative;
+            }
+
+            .sim-slider-list {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                position: relative;
+            }
+
+            .sim-slider-element {
+                width: 100%;
+                transition: opacity 1s ease-in;
+                opacity: 0;
+                position: absolute;
+                z-index: 2;
+                left: 0;
+                top: 0;
+                display: block;
+            }
+
+            /* Navigation item styles */
+                div.sim-slider-arrow-left,
+                div.sim-slider-arrow-right {
+                width: 22px;
+                height: 40px;
+                position: absolute;
+                cursor: pointer;
+                opacity: 0.6;
+                z-index: 4;
+            }
+
+            div.sim-slider-arrow-left {
+                left: 10px;
+                top: 40%;
+                display: block;
+                background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-left.png") no-repeat;
+            }
+
+            div.sim-slider-arrow-right {
+                right: 10px;
+                top: 40%;
+                display: block;
+                background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-right.png") no-repeat;
+            }
+
+            div.sim-slider-arrow-left:hover {
+                opacity: 1.0;
+            }
+
+            div.sim-slider-arrow-right:hover {
+                opacity: 1.0;
+            }
+
+            div.sim-slider-dots {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: 3;
+                text-align: center;
+            }
+
+            span.sim-dot {
+                width: 10px;
+                height: 10px;
+                margin: 5px 7px;
+                padding: 0;
+                display: inline-block;
+                background-color: #BBB;
+                border-radius: 5px;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
+        <div style="padding-top: 15px; padding-bottom: 15px;">
+            <marquee direction="right" style="color: #D9470D; font-size: 40px; font-weight: bolder; line-height: 150%; text-shadow: #000000 0px 1px 1px;">Participates in the New Year's Sale.
+                Discounts up to 60%</marquee>
+        </div>
         <div id="rectangle" style="background-image: 
-        url(https://www.pngkey.com/png/full/249-2492959_what-is-responsive-website-design-and-why-you.png);
+        url(https://248006.selcdn.ru/LandGen/tablet_98a708fd2012f5033663fece150133eac4387673.webp);
         background-position: right;
         background-repeat: no-repeat;">
             <div class="title" >
@@ -79,5 +195,245 @@
                 <a href="" class="pressed-button">Sign up for a course</a>
             </div>
         </div>
+
+        <div class="teacher">
+            <div>
+                <li class="t--1">Duration</li>
+                <p class="t--2">12 months</p>
+            </div>
+            <div>
+                <li class="t--1">18 courses</li>
+                <p class="t--2">in a programme</p>
+            </div>
+            <div>
+                <li class="t--1">Online</li>
+                <p class="t--2">at a convenient time</p>
+            </div>
+            <div>
+                <li class="t--1">Access to the course</li>
+                <p class="t--2">forever</p>
+            </div>
+        </div>
+        <div class="teacher">
+            <div>
+                <h2 class="t--3"> There are not enough specialists in the market</h2>
+            </div>
+            <div>
+                <h1>792 000 — 1 100 000 tenge</h1>
+                <p class="t--2">middle level frontend developer salary</p>
+            </div>
+        </div>
+
+        <h1 style="padding-left: 170px; padding-top: 30px; max-width: 600px; 
+        word-wrap:break-word;" class="h--1">
+            Who is this course for?
+        </h1>
+        <div class="teacher" style="padding-left: 50px;">
+            <div>
+                <img src="https://248006.selcdn.ru/LandGen/tablet_0e0748e0b430521258e47141214e65bd700e9280.webp">
+                <h1 class="t--1">For beginners</h1>
+                <p class="t--2">You will learn how to create websites without any programming experience.</p>
+            </div>  
+            <div>
+                <img src="https://248006.selcdn.ru/LandGen/tablet_88dd983f2d6edf18459c0cb05e4366c26b27303a.webp">
+                <h1 class="t--1">Novice programmers</h1>
+                <p class="t--2">Understand advanced layout techniques.</p>
+            </div>
+            <div>
+                <img src="https://248006.selcdn.ru/LandGen/tablet_747338ce4a7eaf635b4fa15b05927331c8ce8c75.webp">
+                <h1 class="t--1">For freelancers</h1>
+                <p class="t--2">After completing the training, you will collect a portfolio that will help you find a job in a company or freelance.</p>
+            </div>
+        </div>
+        
+        <div class="sim-slider">
+            <ul class="sim-slider-list">
+              <li><img src="http://pvbk.spb.ru/inc/slider/imgs/no-image.gif" alt="screen"></li> <!-- это экран -->
+              <li class="sim-slider-element"><img class="img" src="http://pvbk.spb.ru/inc/slider/imgs/planet0.jpg" alt="0"></li>
+              <li class="sim-slider-element"><img class="img" src="http://pvbk.spb.ru/inc/slider/imgs/planet1.jpg" alt="1"></li>
+              <li class="sim-slider-element"><img class="img" src="http://pvbk.spb.ru/inc/slider/imgs/planet2.jpg" alt="2"></li>
+              <li class="sim-slider-element"><img class="img" src="http://pvbk.spb.ru/inc/slider/imgs/planet3.jpg" alt="3"></li>
+              <li class="sim-slider-element"><img class="img" src="http://pvbk.spb.ru/inc/slider/imgs/planet4.jpg" alt="4"></li>
+              <li class="sim-slider-element"><img class="img" src="http://pvbk.spb.ru/inc/slider/imgs/planet5.jpg" alt="5"></li>
+            </ul>
+            <div class="sim-slider-arrow-left"></div>
+            <div class="sim-slider-arrow-right"></div>
+            <div class="sim-slider-dots"></div>
+        </div>
+
+        <script>
+            // Карусель 1
+            function Sim(sldrId) {
+            let id = document.getElementById(sldrId);
+            if(id) {
+                this.sldrRoot = id
+            }
+            else {
+                this.sldrRoot = document.querySelector('.sim-slider')
+            };
+
+            // Carousel objects
+            this.sldrList = this.sldrRoot.querySelector('.sim-slider-list');
+            this.sldrElements = this.sldrList.querySelectorAll('.sim-slider-element');
+            this.sldrElemFirst = this.sldrList.querySelector('.sim-slider-element');
+            this.leftArrow = this.sldrRoot.querySelector('div.sim-slider-arrow-left');
+            this.rightArrow = this.sldrRoot.querySelector('div.sim-slider-arrow-right');
+            this.indicatorDots = this.sldrRoot.querySelector('div.sim-slider-dots');
+
+            // Initialization
+            this.options = Sim.defaults;
+            Sim.initialize(this)
+            };
+
+            Sim.defaults = {
+
+            // Default options for the carousel
+            loop: true,     // Бесконечное зацикливание слайдера
+            auto: true,     // Автоматическое пролистывание
+            interval: 5000, // Интервал между пролистыванием элементов (мс)
+            arrows: true,   // Пролистывание стрелками
+            dots: true      // Индикаторные точки
+            };
+
+            Sim.prototype.elemPrev = function(num) {
+            num = num || 1;
+
+            let prevElement = this.currentElement;
+            this.currentElement -= num;
+            if(this.currentElement < 0) this.currentElement = this.elemCount-1;
+
+            if(!this.options.loop) {
+                if(this.currentElement == 0) {
+                    this.leftArrow.style.display = 'none'
+                };
+                this.rightArrow.style.display = 'block'
+            };
+
+            this.sldrElements[this.currentElement].style.opacity = '1';
+            this.sldrElements[prevElement].style.opacity = '0';
+
+            if(this.options.dots) {
+                this.dotOn(prevElement); this.dotOff(this.currentElement)
+            }
+            };
+
+            Sim.prototype.elemNext = function(num) {
+            num = num || 1;
+
+            let prevElement = this.currentElement;
+            this.currentElement += num;
+            if(this.currentElement >= this.elemCount) this.currentElement = 0;
+
+            if(!this.options.loop) {
+                if(this.currentElement == this.elemCount-1) {
+                    this.rightArrow.style.display = 'none'
+                };
+                this.leftArrow.style.display = 'block'
+            };
+
+            this.sldrElements[this.currentElement].style.opacity = '1';
+            this.sldrElements[prevElement].style.opacity = '0';
+
+            if(this.options.dots) {
+                this.dotOn(prevElement); this.dotOff(this.currentElement)
+            }
+            };
+
+            Sim.prototype.dotOn = function(num) {
+            this.indicatorDotsAll[num].style.cssText = 'background-color:#BBB; cursor:pointer;'
+            };
+
+            Sim.prototype.dotOff = function(num) {
+            this.indicatorDotsAll[num].style.cssText = 'background-color:#556; cursor:default;'
+            };
+
+            Sim.initialize = function(that) {
+
+            // Constants
+            that.elemCount = that.sldrElements.length; // Количество элементов
+
+            // Variables
+            that.currentElement = 0;
+            let bgTime = getTime();
+
+            // Functions
+            function getTime() {
+                return new Date().getTime();
+            };
+            function setAutoScroll() {
+                that.autoScroll = setInterval(function() {
+                    let fnTime = getTime();
+                    if(fnTime - bgTime + 10 > that.options.interval) {
+                        bgTime = fnTime; that.elemNext()
+                    }
+                }, that.options.interval)
+            };
+
+            // Start initialization
+            if(that.elemCount <= 1) {   // Отключить навигацию
+                that.options.auto = false; that.options.arrows = false; that.options.dots = false;
+                that.leftArrow.style.display = 'none'; that.rightArrow.style.display = 'none'
+            };
+            if(that.elemCount >= 1) {   // показать первый элемент
+                that.sldrElemFirst.style.opacity = '1';
+            };
+
+            if(!that.options.loop) {
+                that.leftArrow.style.display = 'none';  // отключить левую стрелку
+                that.options.auto = false; // отключить автопркрутку
+            }
+            else if(that.options.auto) {   // инициализация автопрокруки
+                setAutoScroll();
+                // Остановка прокрутки при наведении мыши на элемент
+                that.sldrList.addEventListener('mouseenter', function() {clearInterval(that.autoScroll)}, false);
+                that.sldrList.addEventListener('mouseleave', setAutoScroll, false)
+            };
+
+            if(that.options.arrows) {  // инициализация стрелок
+                that.leftArrow.addEventListener('click', function() {
+                    let fnTime = getTime();
+                    if(fnTime - bgTime > 1000) {
+                        bgTime = fnTime; that.elemPrev()
+                    }
+                }, false);
+                that.rightArrow.addEventListener('click', function() {
+                    let fnTime = getTime();
+                    if(fnTime - bgTime > 1000) {
+                        bgTime = fnTime; that.elemNext()
+                    }
+                }, false)
+            }
+            else {
+                that.leftArrow.style.display = 'none'; that.rightArrow.style.display = 'none'
+            };
+
+            if(that.options.dots) {  // инициализация индикаторных точек
+                let sum = '', diffNum;
+                for(let i=0; i<that.elemCount; i++) {
+                    sum += '<span class="sim-dot"></span>'
+                };
+                that.indicatorDots.innerHTML = sum;
+                that.indicatorDotsAll = that.sldrRoot.querySelectorAll('span.sim-dot');
+                // Назначаем точкам обработчик события 'click'
+                for(let n=0; n<that.elemCount; n++) {
+                    that.indicatorDotsAll[n].addEventListener('click', function() {
+                        diffNum = Math.abs(n - that.currentElement);
+                        if(n < that.currentElement) {
+                            bgTime = getTime(); that.elemPrev(diffNum)
+                        }
+                        else if(n > that.currentElement) {
+                            bgTime = getTime(); that.elemNext(diffNum)
+                        }
+                        // Если n == that.currentElement ничего не делаем
+                    }, false)
+                };
+                that.dotOff(0);  // точка[0] выключена, остальные включены
+                for(let i=1; i<that.elemCount; i++) {
+                    that.dotOn(i)
+                }
+            }
+            };
+        new Sim();
+        </script>
     </body>
 </html>
