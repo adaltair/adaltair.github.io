@@ -1,164 +1,83 @@
 <html>
     <head>
         <style>
-        .start-screen__block {
-            padding: 32px 24px;
-            border-radius: 10px;
-            color: var(--color-revert-black);
-            background-color: var(--special-color);
-        }
-        .tooltip--sale {
-            display: grid;
-            grid-template-rows: auto auto;
-            grid-template-columns: 1fr 16px;
-            gap: 4px;
-            padding: 12px 14px;
-            border-radius: 10px;
-            color: var(--accent-always-white-color);
-            font-weight: 400;
-            line-height: 20px;
-            background-color: var(--tooltip-bg-color);
-            
-        }
-        .tooltip--sale {
-            display: grid;
-            grid-template-rows: auto auto;
-            grid-template-columns: 1fr 16px;
-            gap: 4px;
-            padding: 12px 14px;
-            padding-top: 12px;
-            padding-right: 14px;
-            padding-bottom: 12px;
-            padding-left: 14px;
-            border-radius: 10px;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-            border-bottom-left-radius: 10px;
-            color: var(--accent-always-white-color);
-            font-weight: 400;
-            line-height: 20px;
-            background-color: var(--tooltip-bg-color);
-        }
-        .tooltip {
-            position: relative;
-        }
-        .start-screen--bf .start-screen__timer-block {
-            position: absolute;
-            top: -94px;
-        }
-        .tooltip--sale .tooltip__pic {
-            display: none;
-        }
-        .tooltip--sale .tooltip__text {
-            grid-row: 2/-1;
-            grid-column: 1/2;
-        }
-        .f--14 {
-            font-size: 14px;
-        }
-        .f {
-            line-height: 20px;
-        }
-        .tooltip--sale .tooltip__timer {
-            -webkit-font-feature-settings: 'tnum';
-            font-feature-settings: 'tnum';
-        }
-        .tooltip--sale .tooltip__center {
-            grid-row: 1/-1;
-            grid-column: 2/-1;
-            margin-bottom: 0;
-        }
-        .tooltip__button {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            border-radius: 0;
-            color: inherit;
-            font: inherit;
-            background-color: transparent;
-            -webkit-tap-highlight-color: transparent;
-            display: block;
-            -ms-flex-negative: 0;
-            flex-shrink: 0;
-            color: var(--text-main-color);
-            line-height: 1;
-            cursor: pointer;
-        }
-        .tooltip--sale .tooltip__button::before {
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: block;
-            width: 42px;
-            height: 100%;
-            content: '';
-        }
-        .tooltip__wrapper {
-        position: fixed;
-        z-index: 6;
-        display: none;
-        width: 100vw;
-        background-color: rgba(0,0,0,.75);
-    }
+            /* body{
+                background-color: aqua;
+            } */
+            #rectangle {
+                width: 1400px;
+                height: 600px;
+                background: #90e0ef;
+                border-radius: 30px;
+                margin-left: 50px;
+            }
+            .h--1 {
+                font-weight: 700;
+                line-height: 55px;
+                margin-top: 0;
+                display: block;
+                font-size: 4em;
+                margin-block-start: 1.5em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+                width: 45%;
+            }
+            .p--1 {
+                font-size: 25px;
+                line-height: 22px;
+                margin-top: 10px;
+                margin-bottom: 12px;
+            }
+            .h--5{
+                font-size: 21px;
+                line-height: 25px;
+                display: block;
+                margin-block-start: 3em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                width: 50%;
+            }
+            .title{
+                padding-left: 60px;
+                padding-top: 30px;
+            }
+            /* button */
+            .pressed-button {
+                text-decoration: none;
+                display: inline-block;
+                padding: 12px 40px;
+                margin: 50px 10px;
+                border-radius: 30px;
+                background-image: linear-gradient(45deg, #6ab1d7 0%, #33d9de 50%, #002878 100%);
+                background-position: 100% 0;
+                background-size: 200% 200%;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 24px;
+                font-weight: 300;
+                color: white;
+                box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35);
+                transition: .5s;
+            }
+            .pressed-button:hover {
+                box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+                background-position: 0 0;
+            }
         </style>
     </head>
     <body>
-        <div class="start-screen_block">
-            <div class="start-screen_control">
-                <div class="start-screen__wrapper">
-                    <div class="start-screen_timer-block tooltip tooltip--sale" data-time="2021-12-24 23:59:59">
-                        <img class="tooltip_pic" src="https://248006.selcdn.ru/LandGen/NewYear/new_year_percent_sign.png" width="40" height="40" decoding="async" loading="lazy">
-                        <b class="tooltip_text f f--14">  Участвует в новогодней распродаже  </b>
-                        <span class="tooltip_text f f--14">
-                            " Скидки до "
-                            <b>60%</b>
-                            <br>
-                            " действуют "
-                            <span class="tool_timer" data-type="timer">
-                                <b>0</b>
-                                " дней "
-                                <b>00:00:00</b>
-                            </span> 
-                        </span>
-                        <div class="tooltip_center">
-                            <button class="tooltip_bottun" type="button">
-                                ::before
-                                <svg width="16" height="16" aria-hidden="true">
-                                    <use xlink:href="#icon-tooltip-4"></use>
-                                </svg>
-                            </button>
-                            <div class="tooltip_wrapper tooltip_wrapper--botton js-popup">
-                                <div class="tooltip_massage"> 
-                                    <p class="tooltip_desc">
-                                        "  Оставьте заявку и узнайте у менеджера про скидку на курс и подарки от партнёров  "
-                                    </p>
-                                    <button class=" ui-button ui-button--stroke ui-button--small     tooltip__close js-popup__close ">  Понятно  </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="start-screen__buttons">
-                        <a class=" ui-button ui-button--blue ui-button--big   ui-button--stretch-sm-max  start-screen__button js-btn-link " href="#price" data-gtm="lead" data-pixel="msCavChr">  Записаться на курс </a>
-                    </div>
-                </div>
+        <div id="rectangle" style="background-image: 
+        url(https://www.pngkey.com/png/full/249-2492959_what-is-responsive-website-design-and-why-you.png);
+        background-position: right;
+        background-repeat: no-repeat;">
+            <div class="title" >
+                <p class="p--1">3 months free — first payment in 3 months.</p>
+                <h1 class="h--1">Profession Frontend - developer PRO</h1>
+                <h5 class="h--5" >You will start your training by studying the layout, and finish by creating services for business. Gain experience and be able to start a career as a developer.</h5>
+                <a href="" class="pressed-button">Sign up for a course</a>
             </div>
-            <p class="start-screen__credit p p--1"> 3 месяца бесплатно — первый платёж через 3 месяца </p>
-            <h1 class="start-screen__title h h--1"> Профессия Frontend-разработчик PRO </h1>
-            <div class="start-screen__pic">
-                <picture class>
-                    <source media="(min-width: 1200px)" type="image/webp" data-srcset="https://248006.selcdn.ru/LandGen/desktop_2_98a708fd2012f5033663fece150133eac4387673.webp">
-                    <source media="(min-width: 1200px)" data-srcset="https://248006.selcdn.ru/LandGen/desktop_2_98a708fd2012f5033663fece150133eac4387673.png">
-                    <source media="(min-width: 1024px)" type="image/webp" data-srcset="https://248006.selcdn.ru/LandGen/desktop_98a708fd2012f5033663fece150133eac4387673.webp">
-                    <source media="(min-width: 1024px)" data-srcset="https://248006.selcdn.ru/LandGen/desktop_98a708fd2012f5033663fece150133eac4387673.png">
-                    <source media="(min-width: 768px)" type="image/webp" data-srcset="https://248006.selcdn.ru/LandGen/tablet_98a708fd2012f5033663fece150133eac4387673.webp"> 
-                    <source media="(min-width: 768px)" data-srcset="https://248006.selcdn.ru/LandGen/tablet_98a708fd2012f5033663fece150133eac4387673.png">
-                    <source media="(min-width: 320px)" type="image/webp" data-srcset="https://248006.selcdn.ru/LandGen/phone_98a708fd2012f5033663fece150133eac4387673.webp">
-                    <img class="lazy" data-src="https://248006.selcdn.ru/LandGen/phone_98a708fd2012f5033663fece150133eac4387673.png" decoding="async"> 
-                </picture>
-            </div>
-            <p class="start-screen__desc p p--L" ds-content-block="course_description">" Вы начнёте обучение с изучения вёрстки, а закончите — созданием сервисов для бизнеса. Приобретёте опыт и сможете начать карьеру разработчика. "
-            </p>
         </div>
     </body>
 </html>

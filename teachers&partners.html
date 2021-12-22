@@ -238,16 +238,121 @@
         margin-top: 30px;
     }
     
+    /* js */
+    img {
+        width: 100% !important;
+    }
+
+    .sim-slider {
+        max-width: 1000px;
+        min-width: 320px;
+        margin: 20px auto;
+        padding: 30px 50px;
+        border: 1px solid #ccd;
+        background-color: white;
+    }
+
+    /* General styles */
+    .sim-slider {
+        position: relative;
+    }
+
+    .sim-slider-list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        position: relative;
+    }
+
+    .sim-slider-element {
+        width: 100%;
+        transition: opacity 1s ease-in;
+        opacity: 0;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        display: block;
+    }
+
+    /* Navigation item styles */
+        div.sim-slider-arrow-left,
+        div.sim-slider-arrow-right {
+        width: 22px;
+        height: 40px;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0.6;
+        z-index: 4;
+    }
+
+    div.sim-slider-arrow-left {
+        left: 10px;
+        top: 40%;
+        display: block;
+        background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-left.png") no-repeat;
+    }
+
+    div.sim-slider-arrow-right {
+        right: 10px;
+        top: 40%;
+        display: block;
+        background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-right.png") no-repeat;
+    }
+
+    div.sim-slider-arrow-left:hover {
+        opacity: 1.0;
+    }
+
+    div.sim-slider-arrow-right:hover {
+        opacity: 1.0;
+    }
+
+    div.sim-slider-dots {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+        text-align: center;
+    }
+
+    span.sim-dot {
+        width: 10px;
+        height: 10px;
+        margin: 5px 7px;
+        padding: 0;
+        display: inline-block;
+        background-color: #BBB;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
 </style>
 </head>
 <body background="color: #c3846e;">
+    
+    <div class="banner" data-height="600" data-width="100%" data-slide-speed="900" data-autoslide="5000">
+        <img src="https://picsum.photos/1200/600/?random" class="slider">
+        <img src="https://picsum.photos/1300/600/?random" class="slider">
+        <img src="https://picsum.photos/1400/600/?random" class="slider">
+    
+        <div class="previous" data-previous-cursor="left.png"></div>
+        <div class="next" data-next-cursor="right.png"></div>
+    
+        <div class="links">
+            <a href="1"></a>
+            <a href="2"></a>
+            <a href="3"></a>
+        </div>
+
+    </div>
     <div class="back-pic">
         <h1 class="title">
             <span>Partners and Teachers</span>
         </h1>
     </div>
-
     <!-- <h1 class="text2">Schools and Partners</h1> -->
     <p class="top text2">Bilim offers the highest quality online courses from institutions who share our commitment to excellence in teaching and learning.</p>
    
@@ -695,7 +800,446 @@
           <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
         </div>
         <!-- Copyright -->
-      </footer>
+    </footer>
+      
+    <div class="sim-slider">
+        <ul class="sim-slider-list">
+          <li><img src="http://pvbk.spb.ru/inc/slider/imgs/no-image.gif" alt="screen"></li> <!-- это экран -->
+          <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet0.jpg" alt="0"></li>
+          <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet1.jpg" alt="1"></li>
+          <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet2.jpg" alt="2"></li>
+          <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet3.jpg" alt="3"></li>
+          <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet4.jpg" alt="4"></li>
+          <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet5.jpg" alt="5"></li>
+        </ul>
+        <div class="sim-slider-arrow-left"></div>
+        <div class="sim-slider-arrow-right"></div>
+        <div class="sim-slider-dots"></div>
+    </div>
+
+    <div class="banner" data-height="600" data-width="100%" data-slide-speed="900" data-autoslide="5000">
+        <img src="https://picsum.photos/1200/600/?random" class="slider">
+        <img src="https://picsum.photos/1300/600/?random" class="slider">
+        <img src="https://      /1400/600/?random" class="slider">
+    
+        <div class="previous" data-previous-cursor="left.png"></div>
+        <div class="next" data-next-cursor="right.png"></div>
+    
+        <div class="links">
+            <a href="1"></a>
+            <a href="2"></a>
+            <a href="3"></a>
+        </div>
+    </div>
+    <div class="banner" data-height="600" data-width="100%" data-slide-speed="900" data-autoslide="5000">
+        <img src="https://picsum.photos/1200/600/?random" class="slider">
+        <img src="https://picsum.photos/1300/600/?random" class="slider">
+        <img src="https://picsum.photos/1400/600/?random" class="slider">
+    
+        <div class="previous" data-previous-cursor="left.png"></div>
+        <div class="next" data-next-cursor="right.png"></div>
+    
+        <div class="links">
+            <a href="1"></a>
+            <a href="2"></a>
+            <a href="3"></a>
+        </div>
+    </div> 
+    <script>
+        // Elements
+        var bannerEl = document.querySelector(".banner");
+        var sliderEl = document.querySelectorAll(".slider");
+        var previousEl = document.querySelector(".previous");
+        var nextEl = document.querySelector(".next");
+        var linksEl = document.querySelector(".links");
+        var imgLinks = linksEl.getElementsByTagName("a");
+
+        // Data attributes
+        var height = bannerEl.getAttribute("data-height");
+        var width = bannerEl.getAttribute("data-width");
+        var slideSpeed = bannerEl.getAttribute("data-slide-speed");
+        var autoSlide = bannerEl.getAttribute("data-autoslide");
+        var nextCursor = nextEl.getAttribute("data-next-cursor");
+        var previousCursor = previousEl.getAttribute("data-previous-cursor");
+
+        // Slider variables
+        var totalImgs = imgLinks.length;
+        var currentImgNumber = 1;
+        var nextImgNumber = currentImgNumber + 1;
+        var previousImgNumber = totalImgs;
+        var randomImgNumber = 3;
+        var currentImg = bannerEl.querySelector('img:nth-of-type(' + currentImgNumber + ')');
+        var nextImg = bannerEl.querySelector('img:nth-of-type(' + nextImgNumber + ')');
+        var previousImg = bannerEl.querySelector('img:nth-of-type(' + previousImgNumber + ')');
+        var randomImg = bannerEl.querySelector('img:nth-of-type(' + randomImgNumber + ')');
+
+        // Set CSS to element or elements
+        function setCSS(styles, elements) {
+        if (elements.length > 1) {
+            for (var i = 0; i < elements.length; i++) {
+            Object.assign(elements[i].style, styles);
+            }
+        } else {
+            Object.assign(elements.style, styles);
+        }
+        }
+
+        // Set CSS before elements appear
+        document.body.style.margin = '0';
+
+        setCSS({
+        width: width,
+        height: height + 'px',
+        margin: '0 auto',
+        position: 'relative'
+        }, bannerEl);
+
+        setCSS({
+        position: 'absolute',
+        width: '50%',
+        height: height + 'px',
+        top: '0'
+        }, [previousEl, nextEl]);
+
+        setCSS({
+        cursor: (totalImgs <= 1) ? 'default' : previousCursor ? 'url(' + previousCursor + '), auto' : 'w-resize',
+        width: '50%',
+        left: '0'
+        }, previousEl);
+
+        setCSS({
+        cursor: (totalImgs <= 1) ? 'default' : nextCursor ? 'url(' + nextCursor + '), auto' : 'e-resize',
+        right: '0'
+        }, nextEl);
+
+        setCSS({
+        'text-align': 'center',
+        position: 'relative',
+        top: '550px',
+        left: '0', 'right': '0',
+        margin: 'auto',
+        cursor: 'default',
+        width: imgLinks.length * 30 + 'px'
+        }, linksEl);
+
+        // For multiple elements of same class
+        // Iterate over and set individual element's CSS
+        for (var i = 0; i < sliderEl.length; i++) {
+        setCSS({
+            width: width, 'height':
+            height + 'px', 'margin': '0 auto'
+        }, sliderEl[i]);
+
+        setCSS({
+            position: 'absolute',
+            opacity: '0', 'object-fit': 'cover'
+        }, sliderEl[i]);
+        }
+
+        for (var i = 0; i < imgLinks.length; i++) {
+        setCSS({
+            color: '#000',
+            display: 'inline-block',
+            'text-decoration': 'none',
+            background: '#FFF',
+            'border-radius': '50%',
+            height: '15px',
+            width: '15px',
+            margin: '10px 5px',
+            transition: 'all 0.5s'
+        }, imgLinks[i]);
+        }
+
+        (function() {
+        function fadeTo(element, speed, opacity) {
+            setCSS({
+            transition: 'opacity ' + speed + 'ms',
+            opacity: opacity
+            }, element);
+        }
+
+        function loadImg() {
+            fadeTo(currentImg, slideSpeed, 1);
+        }
+
+        function nextImgFade() {
+            fadeTo(currentImg, slideSpeed, 0);
+            fadeTo(nextImg, slideSpeed, 1);
+        }
+
+        function previousImgFade() {
+            fadeTo(currentImg, slideSpeed, 0);
+            fadeTo(previousImg, slideSpeed, 1);
+        }
+
+        function randomImgFade() {
+            fadeTo(currentImg, slideSpeed, 0);
+            fadeTo(randomImg, slideSpeed, 1);
+        }
+
+        function boldText() {
+            for (var i = 0; i < imgLinks.length; i++) {
+            var currentHref = imgLinks[i].getAttribute('href');
+            var opacity = currentImgNumber == currentHref ? 0.8 : 0.4;
+            setCSS({opacity: opacity}, imgLinks[i]);
+            }
+        }
+
+        function imgLoop() {
+            nextImgNumber = currentImgNumber + 1;
+            previousImgNumber = currentImgNumber - 1;
+
+            if (currentImgNumber == totalImgs) {
+            nextImgNumber = 1;
+            }
+
+            if (currentImgNumber == 1) {
+            previousImgNumber = totalImgs;
+            }
+        }
+
+        function refreshImgs() {
+            currentImg = bannerEl.querySelector('img:nth-of-type(' + currentImgNumber + ')');
+            nextImg = bannerEl.querySelector('img:nth-of-type(' + nextImgNumber + ')');
+            previousImg = bannerEl.querySelector('img:nth-of-type(' + previousImgNumber + ')');
+            randomImg = bannerEl.querySelector('img:nth-of-type(' + randomImgNumber + ')');
+        }
+
+        function callFunctions() {
+            boldText();
+            imgLoop();
+            refreshImgs();
+        }
+
+        function restartInterval() {
+            clearInterval(interval);
+            interval = setInterval(loopImages, autoSlide);
+        }
+
+        function loopImages() {
+            var event = document.createEvent('HTMLEvents');
+            event.initEvent('click', 1, 0);
+            nextEl.dispatchEvent(event);
+        }
+
+        // Iterate over all links
+        // On link click, restart interval, and fade in that image
+        for (var i = 0; i < imgLinks.length; i++) {
+            imgLinks[i].onclick = function() {
+            restartInterval();
+            randomImgNumber = parseInt(this.getAttribute('href'));
+            randomImg = bannerEl.querySelector('img:nth-of-type(' + randomImgNumber + ')');
+            randomImgFade();
+            currentImgNumber = randomImgNumber;
+            callFunctions();
+            return false;
+            };
+        }
+
+        // Iterate over previous and next elements
+        // On click, check direction, fade next image in and assign current image number
+        var previousAndNext = [previousEl, nextEl];
+        for (var t = 0; t < previousAndNext.length; t++) {
+            if (totalImgs > 1) {
+            previousAndNext[t].onclick = function(e) {
+                var direction = e.target.getAttribute('class');
+                if (direction == "next") {
+                nextImgFade();
+                currentImgNumber = nextImgNumber;
+                } else {
+                previousImgFade();
+                currentImgNumber = previousImgNumber;
+                }
+                restartInterval();
+                callFunctions();
+            };
+            }
+        }
+
+        boldText();
+        loadImg();
+
+        // Only set interval if there is more than 1 image
+        if (totalImgs > 1) {
+            var interval = setInterval(loopImages, autoSlide);
+        }
+        })();
+
+
+
+        // Карусель 1
+        function Sim(sldrId) {
+        let id = document.getElementById(sldrId);
+        if(id) {
+            this.sldrRoot = id
+        }
+        else {
+            this.sldrRoot = document.querySelector('.sim-slider')
+        };
+
+        // Carousel objects
+        this.sldrList = this.sldrRoot.querySelector('.sim-slider-list');
+        this.sldrElements = this.sldrList.querySelectorAll('.sim-slider-element');
+        this.sldrElemFirst = this.sldrList.querySelector('.sim-slider-element');
+        this.leftArrow = this.sldrRoot.querySelector('div.sim-slider-arrow-left');
+        this.rightArrow = this.sldrRoot.querySelector('div.sim-slider-arrow-right');
+        this.indicatorDots = this.sldrRoot.querySelector('div.sim-slider-dots');
+
+        // Initialization
+        this.options = Sim.defaults;
+        Sim.initialize(this)
+        };
+
+        Sim.defaults = {
+
+        // Default options for the carousel
+        loop: true,     // Бесконечное зацикливание слайдера
+        auto: true,     // Автоматическое пролистывание
+        interval: 5000, // Интервал между пролистыванием элементов (мс)
+        arrows: true,   // Пролистывание стрелками
+        dots: true      // Индикаторные точки
+        };
+
+        Sim.prototype.elemPrev = function(num) {
+        num = num || 1;
+
+        let prevElement = this.currentElement;
+        this.currentElement -= num;
+        if(this.currentElement < 0) this.currentElement = this.elemCount-1;
+
+        if(!this.options.loop) {
+            if(this.currentElement == 0) {
+                this.leftArrow.style.display = 'none'
+            };
+            this.rightArrow.style.display = 'block'
+        };
+
+        this.sldrElements[this.currentElement].style.opacity = '1';
+        this.sldrElements[prevElement].style.opacity = '0';
+
+        if(this.options.dots) {
+            this.dotOn(prevElement); this.dotOff(this.currentElement)
+        }
+        };
+
+        Sim.prototype.elemNext = function(num) {
+        num = num || 1;
+
+        let prevElement = this.currentElement;
+        this.currentElement += num;
+        if(this.currentElement >= this.elemCount) this.currentElement = 0;
+
+        if(!this.options.loop) {
+            if(this.currentElement == this.elemCount-1) {
+                this.rightArrow.style.display = 'none'
+            };
+            this.leftArrow.style.display = 'block'
+        };
+
+        this.sldrElements[this.currentElement].style.opacity = '1';
+        this.sldrElements[prevElement].style.opacity = '0';
+
+        if(this.options.dots) {
+            this.dotOn(prevElement); this.dotOff(this.currentElement)
+        }
+        };
+
+        Sim.prototype.dotOn = function(num) {
+        this.indicatorDotsAll[num].style.cssText = 'background-color:#BBB; cursor:pointer;'
+        };
+
+        Sim.prototype.dotOff = function(num) {
+        this.indicatorDotsAll[num].style.cssText = 'background-color:#556; cursor:default;'
+        };
+
+        Sim.initialize = function(that) {
+
+        // Constants
+        that.elemCount = that.sldrElements.length; // Количество элементов
+
+        // Variables
+        that.currentElement = 0;
+        let bgTime = getTime();
+
+        // Functions
+        function getTime() {
+            return new Date().getTime();
+        };
+        function setAutoScroll() {
+            that.autoScroll = setInterval(function() {
+                let fnTime = getTime();
+                if(fnTime - bgTime + 10 > that.options.interval) {
+                    bgTime = fnTime; that.elemNext()
+                }
+            }, that.options.interval)
+        };
+
+        // Start initialization
+        if(that.elemCount <= 1) {   // Отключить навигацию
+            that.options.auto = false; that.options.arrows = false; that.options.dots = false;
+            that.leftArrow.style.display = 'none'; that.rightArrow.style.display = 'none'
+        };
+        if(that.elemCount >= 1) {   // показать первый элемент
+            that.sldrElemFirst.style.opacity = '1';
+        };
+
+        if(!that.options.loop) {
+            that.leftArrow.style.display = 'none';  // отключить левую стрелку
+            that.options.auto = false; // отключить автопркрутку
+        }
+        else if(that.options.auto) {   // инициализация автопрокруки
+            setAutoScroll();
+            // Остановка прокрутки при наведении мыши на элемент
+            that.sldrList.addEventListener('mouseenter', function() {clearInterval(that.autoScroll)}, false);
+            that.sldrList.addEventListener('mouseleave', setAutoScroll, false)
+        };
+
+        if(that.options.arrows) {  // инициализация стрелок
+            that.leftArrow.addEventListener('click', function() {
+                let fnTime = getTime();
+                if(fnTime - bgTime > 1000) {
+                    bgTime = fnTime; that.elemPrev()
+                }
+            }, false);
+            that.rightArrow.addEventListener('click', function() {
+                let fnTime = getTime();
+                if(fnTime - bgTime > 1000) {
+                    bgTime = fnTime; that.elemNext()
+                }
+            }, false)
+        }
+        else {
+            that.leftArrow.style.display = 'none'; that.rightArrow.style.display = 'none'
+        };
+
+        if(that.options.dots) {  // инициализация индикаторных точек
+            let sum = '', diffNum;
+            for(let i=0; i<that.elemCount; i++) {
+                sum += '<span class="sim-dot"></span>'
+            };
+            that.indicatorDots.innerHTML = sum;
+            that.indicatorDotsAll = that.sldrRoot.querySelectorAll('span.sim-dot');
+            // Назначаем точкам обработчик события 'click'
+            for(let n=0; n<that.elemCount; n++) {
+                that.indicatorDotsAll[n].addEventListener('click', function() {
+                    diffNum = Math.abs(n - that.currentElement);
+                    if(n < that.currentElement) {
+                        bgTime = getTime(); that.elemPrev(diffNum)
+                    }
+                    else if(n > that.currentElement) {
+                        bgTime = getTime(); that.elemNext(diffNum)
+                    }
+                    // Если n == that.currentElement ничего не делаем
+                }, false)
+            };
+            that.dotOff(0);  // точка[0] выключена, остальные включены
+            for(let i=1; i<that.elemCount; i++) {
+                that.dotOn(i)
+            }
+        }
+        };
+    new Sim();
+    </script>
 </body>
 
 </html>
