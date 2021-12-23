@@ -81,7 +81,7 @@ li {
     color: white;
 }
 .welcome{
-    font-size: 150px;
+    font-size: 900%;
     color: white;
     font-weight: 900;
 }
@@ -104,9 +104,27 @@ li {
     outline: none;
     text-decoration: none;
   }
-  .learn:hover,
-  .learn:active {
-    background-color: #fff;
+.learn:hover,
+.learn:active {
+  background-color: #fff;
+  color: #00b4d8;
+  cursor: pointer;
+}
+.page2{
+    display: flex;
+    
+}
+.page2 .text{
     color: #00b4d8;
-    cursor: pointer;
-  }
+    margin-left: 15%;
+    margin-top: 4%;
+    font-size: 40px;
+}
+.page2 img{
+    
+    width: 50%;
+    margin-left: 25%;
+}
+.bestteach{
+    color: #0077b6 ;
+}
