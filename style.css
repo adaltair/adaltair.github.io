@@ -14,11 +14,10 @@ a {
     color: gray;
 }
 a:hover{
-    transform: translateY(-5px);
+    color: white;
 }
 li {
     list-style: none;
-    
 }
 .navbar {
     display: flex;
@@ -44,11 +43,9 @@ li {
 }
 .navlink {
     display: inline-block;
-    vertical-align: top;
     margin: 0 15px;
-    position: relative;
     text-decoration: none;
-    transition: color .1s linear;
+    transition: color 0.5s;
 }
 .navlink:after {
     content: "";
@@ -64,7 +61,7 @@ li {
     left: 0;
     
 
-    transition: opacity .1s linear;
+    transition: opacity 0.1s;
 }
 
 .navlink:hover {
@@ -83,14 +80,13 @@ li {
 }
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: block;
 }
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   max-width: 150px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   border-radius: 15%;
 }
@@ -104,7 +100,7 @@ li {
     color: #002F81;
 }
 .link{
-    transition: transform 0.5s linear;
+    transition: transform 0.5s;
     margin-top: 2%;
 }
                                             /*NAVBAR ENDS*/
@@ -123,7 +119,6 @@ li {
 .welcome{
     font-size: 900%;
     color: white;
-    font-weight: 900;
 }
 .hr{
     color: white;
@@ -136,17 +131,14 @@ li {
 .learn {
     display: inline-block;
     width: 200px;
-    padding: 10px;
     color: #fff;
+    padding: 10px;
     border: 1px solid #fff;
     
     text-align: center;
-    outline: none;
-    text-decoration: none;
     transition: transform 0.5s;
   }
-.learn:hover,
-.learn:active {
+.learn:hover {
   background-color: #fff;
   color: #00b4d8;
   cursor: pointer;
@@ -157,7 +149,6 @@ li {
                                             /*PAGE2*/
 .page2{
     display: flex;
-    
 }
 .page2 .text{
     color: #00b4d8;
@@ -166,7 +157,6 @@ li {
     font-size: 40px;
 }
 .page2 img{
-    margin-bottom: 0px;
     width: 50%;
     margin-left: 25%;
 }
@@ -175,14 +165,13 @@ li {
 }
                                              /*PAGE2 ENDS*/
 .btn{
-    padding:.7rem 3rem;
-    font-size: 1rem;
+    padding: 10px 20px;
+    font-size: 15px;
     background-color: #0077b6;
     color:#eee;
-    border-radius: 5rem;
-    margin-top: 1rem;
+    border-radius: 30px;
+    margin-top: 15px;
     cursor: pointer;
-    position: relative;
     transition:background 1s;
     transition: transform 0.5s;
     border: none;
@@ -204,35 +193,35 @@ li {
 }
 .features_icon{
     width: 60px;
-    height: 60px;
 }
                                               /*PAGE3 ENDS*/
 
-                                              /*WHY*/
+                                              /*BILL*/
 .bill{
     background-color: white;
 }
 .bill .contain{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .bill img{
-    height: 60vh;
+    height: 450px;
+    margin-left: 15%;
 }
 .bill .contain h2{
-    font-size: 2rem;
+    font-size: 37px;
+}
+.bill .contain .kav{
+    margin-left: 58%;
 }
 .bill .contain .row_text{
-    width: 40%;
+    width: 45%;
     color: #0077b6;
+    margin-left: 23%;
+    font-size: 25px;
 }
-
-
-
-
-
-                                              /*WHY ENDS*/
+                                              /*BILL ENDS*/
 
                                               /*CONTACT US*/
 .contact{
@@ -243,64 +232,58 @@ li {
     background-color: #00b4d8;
     text-align: center;
     color: #eee;
-    font-size: 2.5rem;
+    font-size: 35px;
 }
 .contact .row{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+
 }
 .contact .row form{
-    flex:1 1 10rem;
     margin-left: 5%;
     margin-right: 3%;
+    width: 55%;
     background: #eee;
-    padding: 1rem;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 3rem;
-    align-items: flex-start;
     border-radius: 10px;
 }
 .contact .row form .box{
-    height: 5rem;
+    height: 60px;
     width: 49%;
-    border: 0.1rem solid grey;
-    padding:0 1rem;
-    margin: 1rem 0;
-    font-size: 1rem;
+    border: 2px solid grey;
+    padding:0 7px;
+    margin: 10px 0;
+    font-size: 16px;
     color: black;
     background: none;
-    text-transform: none;
     border-radius: 5px;
 }
 .contact .row form .box:focus{
     border-color: #0077b6;
-    border: 0.1rem solid #0077b6;
+    border: 2px solid #0077b6;
 }
-.contact .row form .box::placeholder{
-    text-transform: capitalize;
-}
-.contact .row form .address{
-    height: 10rem;
-    padding: 1rem;
+.contact .row form .comment{
+    height: 150px;
+    padding: 5px;
     resize: none;
     width: 100%;
     background: none;
+    border-radius: 5px;
+    border: 2px solid grey;
 }
 .contact .row form .btn{
     margin-left: 40%;
 }
 .contact .row form .btn:hover{
     background-color: #002F81;
-    color: white;
     transform: translateY(-5px);
 }
 .contact .row .image img{
-    height: 80vh;
-    margin-top: 2rem;
+    width: 30vw;
 }
                                             /*CONTACT US ENDS*/
 
@@ -309,40 +292,30 @@ li {
     background: black;
     color: #8a8a8a;
     font-size: 15px;
-    padding: 60px;
-    justify-content: center;
+    padding: 40px;
+    justify-content: space-evenly;
 }
 .footerrow{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 90px;
     margin-left: 10px;
+    justify-content: space-evenly;
 }
 .footer p{
     color: #8a8a8a;
 }
 .footer h3{
     color:#fff;
-
 }
 .footercol1, .footercol2, .footercol3, .footercol4{
     min-width: 250px;
     margin-bottom: 20px;
 }
-.footercol1{
-    flex-basis: 30%;
-}
-.footercol2{
-    flex: 1;
-    text-align: center;
-}
-.footercol2 img{
-    margin-bottom: 20px;
+.footercol2 p{
+    padding: 5px;
+    padding-left: 0;
 }
 .footercol3, .footercol4{
-    flex-basis: 12%;
     text-align: center;
 }
                                               /*FOOTER ENDS*/
