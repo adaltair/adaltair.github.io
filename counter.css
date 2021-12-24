@@ -9,17 +9,17 @@
   .numbers__window {
     display: inline-block;
     overflow: hidden;
-    width: 0.5em;
+    width: 0.6em;
     height: 1em;
   }
   .numbers__window__digit {
     font: inherit;
     word-break: break-all;
     display: block;
-    width: 0;
+    width: 1em;
     padding: 0 0.52em 0 0;
     margin: 0 auto;
-    overflow: inherit;
+    overflow: inherit;  
     animation: counting 0.4s steps(10) forwards infinite;
   }
   .numbers__window__digit::before {

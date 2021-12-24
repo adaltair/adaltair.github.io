@@ -38,7 +38,6 @@
               -o-animation: fadeIn ease 3s;
               -ms-animation: fadeIn ease 3s;
           }
-
           .fade-in5 {
             animation: fadeIn ease 5s;
             -webkit-animation: fadeIn ease 5s;
@@ -46,41 +45,33 @@
             -o-animation: fadeIn ease 5s;
             -ms-animation: fadeIn ease 5s;
           }
-
           html {
             scroll-behavior: smooth;
           }
-
           .section1{
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: white; 
-            
-            /* background-image: linear-gradient(white, #00b4d8); */
           }
-
           .section{
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #00b4d8; /* For browsers that do not support gradients */
+            background-color: #00b4d8;
             background-image: linear-gradient(#00b4d8, white);
             
           }
-
           .section2{
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #00b4d8; /* For browsers that do not support gradients */
+            background-color: #00b4d8;
             background-image: linear-gradient(white, #00b4d8);
-            
           }
-
           .a1{
             color: #006ba5;
             text-decoration: none;
@@ -97,82 +88,7 @@
           @-ms-keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
           /* FADE-IN TEXT */
 
-
-          
-
-
-
-          /* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-
-
-.container {
-	max-width: 1100px;
-	margin: 0 auto;
-	overflow: auto;
-}
-
-header {
-	flex: 1;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-header h1 {
-	font-size: 60px;
-}
-
-.counters {
-	background: #0f479a;
-	color: #fff;
-	padding: 40px 20px;
-	border-top: 3px lightskyblue solid;
-}
-
-.counters .container {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 30px;
-	text-align: center;
-}
-
-.counters i {
-	color: lightskyblue;
-	margin-bottom: 5px;
-}
-
-.counters .counter {
-	font-size: 45px;
-	margin: 10px 0;
-}
-
-@media (max-width: 700px) {
-	.counters .container {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	.counters .container > div:nth-of-type(1),
-	.counters .container > div:nth-of-type(2) {
-		border-bottom: 1px lightskyblue solid;
-		padding-bottom: 20px;
-	}
-} */
-
-
-
-
-
-          
-          
-
+     
 
         </style>
 
@@ -194,14 +110,10 @@ header h1 {
             }
           }
             window.addEventListener("scroll", reveal);
-          
-        </script>
-
-
-          
         </script>
         <!-- SCROLLDOWN ANIMATION -->
 
+       
         <script type="text/javascript" src="scrolldown_button.js"></script>
 
     </head>
@@ -209,18 +121,34 @@ header h1 {
 
     <title>Bilim</title>
                 <body>
+
+                  <!-- NAVBAR -->
+
                     <nav class="navbar">
                         <img class="logo" src="logo.png"/>
                         <ul class="nav-links">
                           <div class="menu">
                             <li><a class= "navlink" href="index.html">MAIN</a></li>
                             <li><a class= "navlink" href="about.html">ABOUT US</a></li>
-                            <li><a class= "navlink" href="courses.html">COURSES</a></li>
+                            <div class="link">
+                              <a class="alink" href="courses.html">COURSES</a>
+                              <div class="dropdown-content">
+                                <a class="dropa" href="">Java</a>
+                                <a class="dropa" href="">HTML</a>
+                                <a class="dropa" href="">Python</a>
+                              </div>
+                            </div>
                             <li><a class= "navlink" href="teachers&partners.html">TEACHERS</a></li>
                             <li><a class= "navlink" href="contacts.html">CONTACTS</a></li>
                           </div>
                         </ul>
                       </nav>
+
+                  <!-- NAVBAR -->
+
+
+
+                  <!-- PAGE1 -->
 
                       <div class="page" style="background-image: 
                       url(https://www.clipartmax.com/png/full/360-3608296_author-clipart-focused-student-case-study-vector.png);
@@ -233,21 +161,20 @@ header h1 {
                       
                         <h3 class="toptext fade-in3">BILIM - is the best courses website that provides you the most useful and affordable courses on the internet
                         </h3>
+                        
                         <br><br><br><br><br><br><br><br><br>
                         
                         <h3 class="toptext fade-in5">More info</h3>
-                        
-                        
-                          <a href="#down" class="scroll-down" ></a>
-                        
+
+                          <a href="#down" class="scroll-down" ></a> 
                       </div>
 
-
-                     
-                        
+                  <!-- PAGE1 -->
 
 
-                      
+
+                  <!-- PAGE2 -->
+
                       <section id="down" class="section">
                         <div class="container reveal" >
                           <h2>Our courses</h2>
@@ -277,66 +204,90 @@ header h1 {
                               </p>
                             </div>
                           </div>
-                          
                         </div>
                       </section>
 
+                  <!-- PAGE2 -->
                       
                       
-                    <script src="js/functions.js"></script> 
-                  
-
                     
-                  <section class="section1" style="background-image: 
-                  url('file:///C:/Users/rusti/Documents/GitHub/adaltair.github.io/coder1.png');
-                  background-position: left;
-                  background-repeat: no-repeat;">
-                  
-                        <h1 class="world" style="color:#00b4d8;">Teachers and Students</h1>
+                  <!-- PAGE3 -->
 
-<!--                         
-                        <section class="counters">
-                          <div class="container">
-                            <div>
-                              <i class="fab fa-youtube fa-4x"></i>
-                              <div class="counter" data-target="34">0</div>
-                              <h3>Web teachers</h3>
-                            </div>
-                            <div>
-                              <i class="fab fa-twitter fa-4x"></i>
-                              <div class="counter" data-target="42">0</div>
-                              <h3>SQL teachers</h3>
-                            </div>
-                            <div>
-                              <i class="fab fa-facebook fa-4x"></i>
-                              <div class="counter" data-target="37">0</div>
-                              <h3>JAVA teachers</h3>
-                            </div>
-                            <div>
-                              <i class="fab fa-linkedin fa-4x"></i>
-                              <div class="counter" data-target="1342">0</div>
-                              <h3>Total students</h3>
-                            </div>
-                          </div>
-                        </section> -->
-                        <section class="section1">
-                        <div class="numbers">
-                          <span class="numbers__window">
-                              <span class="numbers__window__digit numbers__window__digit--1" data-fake="8642519073">8</span>
-                          </span>
-                          <span class="numbers__window">
-                              <span class="numbers__window__digit numbers__window__digit--2" data-fake="5207186394">5</span>
-                          </span>
-                          <span class="numbers__window">
-                              <span class="numbers__window__digit numbers__window__digit--3" data-fake="8395216407">2</span>
-                          </span>
+                  <section class="section1" style="background-image: url('coder1.png');background-position: left;background-repeat: no-repeat;">
+                    
+                    <div class="container reveal" >
+                      <h2>Essential information</h2>
+                      <div class="text-container">
+                        <div class="text-box">
+                          <p><hr class="hr"><br><br><br>
+                            We are working for ten years, starting from 2011. At first, we had a small room in Kaskelen city where we 
+                            were teaching school students to help them with english classes. For today we had grown to this big community 
+                            that shares information all across the internet. We gained a lot of trust from over 32 countries all around the world.
+                             <br><br><br><hr class="hr">
+                          </p>
+                        </div>
                       </div>
-                    </section>
-
-                        <br><br>  
+                    </div>
+                      
+                  
                       </section> 
 
-                    <script src="functions.js"></script>
+                      <!-- PAGE3 -->
+
+                      <!-- PAGE4 -->
+                      <section class="section2">
+                        
+                        <iframe width="1120" height="730" src="https://www.youtube.com/embed/JfVOs4VSpmA" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+
+                      </section>
+                      <!-- PAGE4 -->
+
+                      <!-- FOOTER -->
+
+                    <div class="footer">
+                      <div class="fcontainer">
+                          <div class="footerrow">
+                              <div class="footercol1">
+                                  <h3>Download our app</h3>
+                                  <p>Download app for Android and IOS mobile phone</p>
+                                  <div class="app">
+                                      <a href="https://play.google.com/store"><img src="play-store.png" alt="" width="150px"></a>
+                                      <a href="https://www.apple.com/ru/app-store/"><img src="app-store.png" alt=""width="150px" ></a>
+                                  </div>
+                              </div>
+                              <div class="footercol2">
+                                  <img src="logo.png" width="200px">
+                              </div>
+                              <div class="footercol3">
+                                  <h3>Usefull links</h3>
+                                  <ul>
+                          <a href="privacy.html"><li>Privacy Policy</li></a>
+                          <a href=""><li>Terms of Use</li></a>
+                          <a href=""><li>Sales and Refunds</li></a>
+                          <a href=""><li>Legal</li></a>
+                                  </ul>
+                              </div>
+                              <div class="footercol4">
+                                  <h3>Follow us</h3>
+                                  <ul>
+                          <a href=""><li>Facebook</li></a>
+                          <a href=""><li>TikTok</li></a>
+                          <a href=""><li>Instagram</li></a>
+                          <a href=""><li>YouTube</li></a>
+                                  </ul>
+                              </div>
+                          </div>
+                          <hr>
+                          <p class="copy">Copyright © 2021 Bilim Inc. All rights reserved.</p>
+                      </div>
+                  </div>
+
+                  <!-- FOOTER -->
+                
                      
 
                 </body>
