@@ -1,48 +1,32 @@
-// DOM Element's
 const counters = document.querySelectorAll('.counter');
+const speed = 10; // The lower the slower
 
-/*** Using forEach() ***/
+counters.forEach(counter => {
+	const updateCount = () => {
+		const target = +counter.getAttribute('data-target');
+		const count = +counter.innerText;
+
+		// Lower inc to slow and higher to slow
+		const inc = target / speed;
+
+		// console.log(inc);
+		// console.log(count);
+
+		// Check if target is reached
+		if (count < target) {
+			// Add inc to count and output in counter
+			counter.innerText = count + inc;
+			// Call function every ms
+			setTimeout(updateCount, 1);
+		} else {
+			counter.innerText = target;
+		}
+	};
+
+	updateCount();
+});
 
 
-// counters.forEach(counter => {
-//     const updateCount = () => {
-//         const target = +counter.getAttribute('data-target');
-//         const count = +counter.innerText;
-//         const speed = 5000;
-
-//         const inc = target / speed;
-
-//         if(count < target) {
-//             counter.innerText = Math.ceil(count + inc);
-//             setTimeout(updateCount, 1);
-//         } else {
-//             counter.innerText = target;
-//         }
-//     }
-
-//     updateCount();
-// })
 
 
-
-/*** Same functionality, now using for...of ***/
-
-for(let n of counters) {
-    const updateCount = () => {
-        const target = + n.getAttribute('data-target');
-        const count = + n.innerText;
-        const speed = 5000;
-        
-        const inc = target / speed; 
-
-        if(count < target) {
-            n.innerText = Math.ceil(count + inc);
-            setTimeout(updateCount, 1);
-        } else {
-            n.innerText = target;
-        }
-    }
-
-    updateCount();
-}
 

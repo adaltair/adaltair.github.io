@@ -57,7 +57,28 @@
             justify-content: center;
             align-items: center;
             background-color: white; 
+            
             /* background-image: linear-gradient(white, #00b4d8); */
+          }
+
+          .section{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00b4d8; /* For browsers that do not support gradients */
+            background-image: linear-gradient(#00b4d8, white);
+            
+          }
+
+          .section2{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00b4d8; /* For browsers that do not support gradients */
+            background-image: linear-gradient(white, #00b4d8);
+            
           }
 
           .a1{
@@ -65,6 +86,8 @@
             text-decoration: none;
             margin: auto;
           }
+
+          
 
           /* FADE-IN TEXT */
           @keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
@@ -76,6 +99,77 @@
 
 
           
+
+
+
+          /* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+header {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header h1 {
+	font-size: 60px;
+}
+
+.counters {
+	background: #0f479a;
+	color: #fff;
+	padding: 40px 20px;
+	border-top: 3px lightskyblue solid;
+}
+
+.counters .container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 30px;
+	text-align: center;
+}
+
+.counters i {
+	color: lightskyblue;
+	margin-bottom: 5px;
+}
+
+.counters .counter {
+	font-size: 45px;
+	margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+	.counters .container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.counters .container > div:nth-of-type(1),
+	.counters .container > div:nth-of-type(2) {
+		border-bottom: 1px lightskyblue solid;
+		padding-bottom: 20px;
+	}
+} */
+
+
+
+
+
           
           
 
@@ -102,6 +196,10 @@
             window.addEventListener("scroll", reveal);
           
         </script>
+
+
+          
+        </script>
         <!-- SCROLLDOWN ANIMATION -->
 
         <script type="text/javascript" src="scrolldown_button.js"></script>
@@ -124,7 +222,10 @@
                         </ul>
                       </nav>
 
-                      <div class="page">
+                      <div class="page" style="background-image: 
+                      url(https://www.clipartmax.com/png/full/360-3608296_author-clipart-focused-student-case-study-vector.png);
+                      background-position: right;
+                      background-repeat: no-repeat;">
                         <br><br>
                         <h1 class="world">What is bilim?</h1>
                         <hr class="hr">
@@ -147,16 +248,16 @@
 
 
                       
-                      <section id="down">
+                      <section id="down" class="section">
                         <div class="container reveal" >
                           <h2>Our courses</h2>
                           <div class="text-container">
                             <div class="text-box">
-                              <h3>Web-programming</h3>
+                              <h3>Web-prog</h3>
                               <p>
                                 Web programming refers to the writing and coding involved in Web development, which includes Web content,
                                  Web client scripting and network security.
-                                 <p><a class="a1" href="web.html">Learn more ›</a></p>
+                                 <br><br><br><p style="text-align:center;"><a class="a1" href="web.html">Learn more ›</a></p>
                               </p>
                             </div>
                             <div class="text-box">
@@ -164,7 +265,7 @@
                               <p>
                                 Database management refers to the actions a business takes to manipulate and control data to meet 
                                 conditions throughout the entire data lifecycle. 
-                                <p><a class="a1" href="sql.html">Learn more ›</a></p>
+                                <br><br><br><p style="text-align:center;"><a class="a1" href="sql.html">Learn more ›</a></p>
                               </p>
                             </div>
                             <div class="text-box">
@@ -172,7 +273,7 @@
                               <p>
                                 Java is a high-level, class-based, object-oriented programming language that is designed to have as few 
                                 implementation dependencies as possible. 
-                                <p><a class="a1" href="java.html">Learn more ›</a></p>
+                                <br><br><br><p style="text-align:center;"><a class="a1" href="java.html">Learn more ›</a></p>
                               </p>
                             </div>
                           </div>
@@ -180,36 +281,63 @@
                         </div>
                       </section>
 
-                      <section class="section1">
-                      <section class="counters">
-                        <div class="container">
-                            <div>
-                                <i class="fab fa-youtube fa-4x"></i>
-                                <div class="counter" data-target="300000">0</div>
-                                <h3>Subscribers</h3>
-                            </div>
-                            <div>
-                                <i class="fab fa-twitter fa-4x"></i>
-                                <div class="counter" data-target="250000">0</div>
-                                <h3>Followers</h3>
-                            </div>
-                            <div>
-                                <i class="fab fa-facebook fa-4x"></i>
-                                <div class="counter" data-target="180000">0</div>
-                                <h3>Likes</h3>
-                            </div>
-                            <div>
-                                <i class="fab fa-linkedin fa-4x"></i>
-                                <div class="counter" data-target="90000">0</div>
-                                <h3>Connections</h3>
-                            </div>
-                        </div>
-                    </section>
-                  </section>
+                      
+                      
                     <script src="js/functions.js"></script> 
                   
 
+                    
+                  <section class="section1" style="background-image: 
+                  url('file:///C:/Users/rusti/Documents/GitHub/adaltair.github.io/coder1.png');
+                  background-position: left;
+                  background-repeat: no-repeat;">
+                  
+                        <h1 class="world" style="color:#00b4d8;">Teachers and Students</h1>
 
+<!--                         
+                        <section class="counters">
+                          <div class="container">
+                            <div>
+                              <i class="fab fa-youtube fa-4x"></i>
+                              <div class="counter" data-target="34">0</div>
+                              <h3>Web teachers</h3>
+                            </div>
+                            <div>
+                              <i class="fab fa-twitter fa-4x"></i>
+                              <div class="counter" data-target="42">0</div>
+                              <h3>SQL teachers</h3>
+                            </div>
+                            <div>
+                              <i class="fab fa-facebook fa-4x"></i>
+                              <div class="counter" data-target="37">0</div>
+                              <h3>JAVA teachers</h3>
+                            </div>
+                            <div>
+                              <i class="fab fa-linkedin fa-4x"></i>
+                              <div class="counter" data-target="1342">0</div>
+                              <h3>Total students</h3>
+                            </div>
+                          </div>
+                        </section> -->
+                        <section class="section1">
+                        <div class="numbers">
+                          <span class="numbers__window">
+                              <span class="numbers__window__digit numbers__window__digit--1" data-fake="8642519073">8</span>
+                          </span>
+                          <span class="numbers__window">
+                              <span class="numbers__window__digit numbers__window__digit--2" data-fake="5207186394">5</span>
+                          </span>
+                          <span class="numbers__window">
+                              <span class="numbers__window__digit numbers__window__digit--3" data-fake="8395216407">2</span>
+                          </span>
+                      </div>
+                    </section>
+
+                        <br><br>  
+                      </section> 
+
+                    <script src="functions.js"></script>
+                     
 
                 </body>
 </html>
