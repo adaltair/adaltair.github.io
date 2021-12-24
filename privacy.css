@@ -1,5 +1,6 @@
 *{
     padding: 10px;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
 h1{
@@ -15,6 +16,9 @@ a{
     font-size: 30;
     color: gray;
 }
+a:hover{
+    transform: translateY(-5px);
+}
 li {
     list-style: none;
 }
@@ -23,15 +27,16 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 5px;
-    background-color: #002F81;
+    background-color: #00b4d8;
 }
 .logo {
     width: 10%;
     margin-left: 5%;
 }
 .nav-links a {
-    color: #00b4d8;
+    color: white;
     padding: 1px;
+    transition: transform 0.5s;
 }
 .menu {
     display: flex;

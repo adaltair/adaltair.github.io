@@ -11,9 +11,7 @@ body {
                                               /* NAVBAR*/
 a {
     text-decoration: none;
-    font-size: 30;
     color: gray;
-    
 }
 a:hover{
     transform: translateY(-5px);
@@ -178,28 +176,21 @@ li {
                                               /*PAGE3 ENDS*/
 
                                               /*WHY*/
-.why{
+.bill{
     background-color: white;
-
 }
-.why .contain{
+.bill .contain{
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.why header{
-    text-align: center;
-    color: #002F81;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-.why img{
+.bill img{
     height: 60vh;
 }
-.why .contain h2{
+.bill .contain h2{
     font-size: 2rem;
 }
-.why .contain .row_text{
+.bill .contain .row_text{
     width: 40%;
     color: #0077b6;
 }
@@ -322,3 +313,6 @@ li {
     text-align: center;
 }
                                               /*FOOTER ENDS*/
+.blank{
+    height: 25px;
+}

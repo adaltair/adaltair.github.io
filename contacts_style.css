@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+a:hover{
+    transform: translateY(-5px);
+}
+li {
+    list-style: none;
+    
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #00b4d8;
+}
+.logo {
+    width: 10%;
+    margin-left: 5%;
+}
+.nav-links a {
+    color: white;
+    padding: 15px;
+    transition: transform 0.5s;
+}
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 15px;
+    padding: 15px;
+}
+.navlink {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    text-decoration: none;
+    transition: color .1s linear;
+}
+.navlink:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #002F81;
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    
+
+    transition: opacity .1s linear;
+}
+
+.navlink:hover {
+    color: #002F81;
+}
+
+.navlink:hover:after{
+    opacity: 1;
+}
+/*navbar ends*/
+.blank{
+    height: 30px;
+}
+h1{
+    padding: 20px;
+    text-align: center;
+    color: #002F81;
+}
+/*page1*/
+.page1{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+.page1 .row_text{
+    color: #002F81;
+    font-size: 25px;
+}
+.page1 .row h4{
+    color: #002F81;
+    font-size: 25px;
+}
+.page1 .row{
+    justify-content: center;
+    padding: 10px;
+}
+.page1 .row_text .soc{
+    height: 60px;
+    padding: 5px;
+    filter: grayscale(100%);
+}
+.page1 .row_text .soc:hover{
+    filter: grayscale(0%);
+    transition: 0.4s;
+}
+
+                           /*footer*/
+a{
+    text-decoration: none;
+    color: gray;
+}
+.footer{
+    background: black;
+    color: #8a8a8a;
+    font-size: 15px;
+    padding: 60px;
+    justify-content: center;
+}
+.footerrow{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 90px;
+    margin-left: 10px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color:#fff;
+
+}
+.footercol1, .footercol2, .footercol3, .footercol4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footercol1{
+    flex-basis: 30%;
+}
+.footercol2{
+    flex: 1;
+    text-align: center;
+}
+.footercol2 img{
+    margin-bottom: 20px;
+}
+.footercol3, .footercol4{
+    flex-basis: 12%;
+    text-align: center;
+}
