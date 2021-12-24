@@ -12,6 +12,7 @@ body {
 a {
     text-decoration: none;
     color: gray;
+    
 }
 a:hover{
     color: white;
@@ -66,6 +67,7 @@ li {
 
 .navlink:hover {
     color: #002F81;
+    transform: translateY(-5px);
 }
 
 .navlink:hover:after{
