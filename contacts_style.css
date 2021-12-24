@@ -6,9 +6,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
-a:hover{
-    transform: translateY(-5px);
-}
 li {
     list-style: none;
     
@@ -62,6 +59,7 @@ li {
 
 .navlink:hover {
     color: #002F81;
+    transform: translateY(-5px);
 }
 
 .navlink:hover:after{
