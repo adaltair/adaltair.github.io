@@ -8,6 +8,7 @@ body {
     /* background-color: #00b4d8; */
     
 }
+                                              /* NAVBAR*/
 a {
     text-decoration: none;
     font-size: 30;
@@ -75,7 +76,9 @@ li {
 .navlink:hover:after{
     opacity: 1;
 }
+                                            /*NAVBAR ENDS*/
 
+                                            /*PAGE 1*/
 .page{
     text-align: center;
     background-color: #00b4d8;
@@ -118,6 +121,9 @@ li {
   cursor: pointer;
   transform: translateY(-5px);
 }
+                                            /*PAGE1 ENDS*/
+
+                                            /*PAGE2*/
 .page2{
     display: flex;
     
@@ -136,6 +142,7 @@ li {
 .bestteach{
     color: #0077b6 ;
 }
+                                             /*PAGE2 ENDS*/
 .btn{
     padding:.7rem 3rem;
     font-size: 1rem;
@@ -149,6 +156,61 @@ li {
     transition: transform 0.5s;
     border: none;
 }
+                                            /*PAGE3*/
+.page3{
+    background-color: #0077b6;
+}
+.features{
+    display: flex;
+    justify-content: space-evenly;
+    color: #eee;
+}
+.features_item{
+    text-align: center;
+    margin-top: 50px;
+    width: 250px;
+    margin-bottom: 50px;
+}
+.features_icon{
+    width: 60px;
+    height: 60px;
+}
+                                              /*PAGE3 ENDS*/
+
+                                              /*WHY*/
+.why{
+    background-color: white;
+
+}
+.why .contain{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.why header{
+    text-align: center;
+    color: #002F81;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.why img{
+    height: 60vh;
+}
+.why .contain h2{
+    font-size: 2rem;
+}
+.why .contain .row_text{
+    width: 40%;
+    color: #0077b6;
+}
+
+
+
+
+
+                                              /*WHY ENDS*/
+
+                                              /*CONTACT US*/
 .contact{
     background-color: #00b4d8;
 
@@ -216,9 +278,9 @@ li {
     height: 80vh;
     margin-top: 2rem;
 }
+                                            /*CONTACT US ENDS*/
 
-
-/*footer ________*/
+                                            /*FOOTER*/
 .footer{
     background: black;
     color: #8a8a8a;
@@ -259,3 +321,4 @@ li {
     flex-basis: 12%;
     text-align: center;
 }
+                                              /*FOOTER ENDS*/
