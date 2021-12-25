@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="about_style.css">
+        <link rel="stylesheet" href="scrolldown_animation.css">
+        <link rel="stylesheet" href="scrolldown_button.css">
+        <link rel="stylesheet" href="sql_style.css">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="SHORTCUT ICON" href="logosmall.png" type="image/x-icon">
+	<!--font bilbo-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
+	<!---->
+        <style>
+          .backdiv{
+            width: 80%;
+          }
+          .toptext{
+            margin: auto;
+            width: 80%;
+            font-size: 40px;
+            color: white;
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+          }
+          .fade-in3 {
+              animation: fadeIn ease 3s;
+              -webkit-animation: fadeIn ease 3s;
+              -moz-animation: fadeIn ease 3s;
+              -o-animation: fadeIn ease 3s;
+              -ms-animation: fadeIn ease 3s;
+          }
+          .fade-in5 {
+            animation: fadeIn ease 5s;
+            -webkit-animation: fadeIn ease 5s;
+            -moz-animation: fadeIn ease 5s;
+            -o-animation: fadeIn ease 5s;
+            -ms-animation: fadeIn ease 5s;
+          }
+          html {
+            scroll-behavior: smooth;
+          }
+          .section1{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white; 
+          }
+          .section{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00b4d8;
+            background-image: linear-gradient(#00b4d8, white);
+            
+          }
+          .section2{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00b4d8;
+            background-image: linear-gradient(white, #00b4d8);
+          }
+          .a1{
+            color: #006ba5;
+            text-decoration: none;
+            margin: auto;
+          }
+
+          table {
+                        border-collapse: collapse;
+                        width: 100%;
+                        }
+
+                        th, td {
+                        padding: 8px;
+                        text-align: left;
+                        border-bottom: 1px solid rgb(0, 0, 0);
+                        }
+
+                        tr:hover {background-color: rgb(175, 174, 174);}
+
+                        .button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button { 
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+                        
+          
+
+          /* FADE-IN TEXT */
+          @keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
+          @-moz-keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
+          @-webkit-keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
+          @-o-keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
+          @-ms-keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
+          /* FADE-IN TEXT */
+
+     
+
+        </style>
+
+        <!-- SCROLLDOWN ANIMATION -->
+        <script>
+          function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+              var windowHeight = window.innerHeight;
+              var elementTop = reveals[i].getBoundingClientRect().top;
+              var elementVisible = 150;
+
+              if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+              } else {
+                reveals[i].classList.remove("active");
+              }
+            }
+          }
+            window.addEventListener("scroll", reveal);
+        </script>
+        <!-- SCROLLDOWN ANIMATION -->
+
+       
+        <script type="text/javascript" src="scrolldown_button.js"></script>
+
+    </head>
+    
+
+    <title>Bilim</title>
+                <body>
+
+                  <!-- NAVBAR -->
+
+                    <nav class="navbar">
+                        <img class="logo" src="logo.png"/>
+                        <ul class="nav-links">
+                          <div class="menu">
+                            <li><a class= "navlink" href="index.html">MAIN</a></li>
+                            <li><a class= "navlink" href="about.html">ABOUT US</a></li>
+                            <div class="link">
+                              <a class="alink" href="courses.html">COURSES</a>
+                              <div class="dropdown-content">
+                                <a class="dropa" href="java.html">Java</a>
+                                <a class="dropa" href="web.html">HTML</a>
+                                <a class="dropa" href="sql.html">SQL</a>
+                              </div>
+                            </div>
+                            <li><a class= "navlink" href="teachers&partners.html">TEACHERS</a></li>
+                            <li><a class= "navlink" href="contacts.html">CONTACTS</a></li>
+                          </div>
+                        </ul>
+                      </nav>
+
+                  <!-- NAVBAR -->
+
+
+
+                  <!-- PAGE1 -->
+
+                      <div class="page" style="background-image: 
+                      url(sql2.png);
+                      background-position: center;
+                      background-repeat: no-repeat;">
+                        <br><br>
+                        <h1 class="world">Database management</h1>
+                        <hr class="hr">
+                        <br><br>
+                      
+                        <h3 class="welcome" style="font-size: 30px; margin-left: 30px; margin-right: 30px">Database management systems are software systems used to manage and manipulate data in a database. As most application performance issues originate in the database, knowing how to monitor and optimize your database is essential to your operations.
+                        </h3>
+                        
+                        <br><br><br><br><br><br><br><br><br>
+                        
+                        <h3 class="welcome" style="font-size: 30px; margin-left: 30px; margin-right: 30px">
+                            Only the best teachers from BILIM provide courses of Database management, which is so crucial now.
+                        </h3>
+
+                          <!-- <a href="#down" class="scroll-down" ></a>  -->
+                      </div>
+
+                  <!-- PAGE1 -->
+
+
+
+                  <!-- PAGE2 -->
+
+                      <div class="section" style="vertical-align: middle; display:flex;">
+                       
+
+                        <h2 class="welcome" style="font-size: 30px; color:black;margin-right: 40px;">Reasons to study Database in bilim</h2>
+
+                        <table style="text-align: center; width: 800px;">
+                        <tr>
+                            <th>BILIM</th>
+                            <th>Others</th>
+                            <th>Winner</th>
+                        </tr>
+                        <tr>
+                            <td>Best teachers</td>
+                            <td>Teachers always change</td>
+                            <td>Bilim</td>
+                        </tr>
+                        <tr>
+                            <td>Affordable prices</td>
+                            <td>Very high prices</td>
+                            <td>Bilim</td>
+                        </tr>
+                        <tr>
+                            <td>A lot of partners</td>
+                            <td>No partners</td>
+                            <td>Definitely Bilim</td>
+                        </tr>
+                        <tr>
+                            <td>Who won?</td>
+                            <td>Bilim?</td>
+                            <td>Bilim!</td>
+                        </tr>
+                        </table>
+
+
+
+    
+                    </div>
+
+
+                      
+
+
+                  <!-- PAGE2 -->
+                      
+                  <!-- <div class="zoom" style="justify-content: space-between;">
+                      <img src="sql1.png" style="width: 200px;"/></div> -->
+
+
+                     
+                  <!-- PAGE3 -->
+
+                  <section class="section1" style="background-image: url('sql2.png');background-position: left;background-repeat: no-repeat;">
+                    
+                    <div class="container reveal" >
+                      <h2>Still not confident?</h2>
+                      <div class="text-container">
+                        <div class="text-box">
+                          <p><hr class="hr"><br><br><br>
+                            A lot of students talk about BILIM very often. That's because we are the most trustful organization that will help you to achieve more.
+                             <br><br><br><hr class="hr">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                      
+                  
+                      </section> 
+
+                      <!-- PAGE3 -->
+
+                      <!-- PAGE4 -->
+                      <h3 class="welcome" style="font-size: 30px; margin-left: 540px; margin-right: 30px; margin-bottom: 200px; color: black;">
+                        Already decided?
+                        <button href="#" class="button button2" style="position:relative;">Buy courses!</button>
+                    </h3>
+                      
+                      <!-- PAGE4 -->
+
+                      <!-- FOOTER -->
+
+                    <div class="footer">
+                      <div class="fcontainer">
+                          <div class="footerrow">
+                              <div class="footercol1">
+                                  <h3>Download our app</h3>
+                                  <p>Download app for Android and IOS mobile phone</p>
+                                  <div class="app">
+                                      <a href="https://play.google.com/store"><img src="play-store.png" alt="" width="150px"></a>
+                                      <a href="https://www.apple.com/ru/app-store/"><img src="app-store.png" alt=""width="150px" ></a>
+                                  </div>
+                              </div>
+                              <div class="footercol2">
+                                  <img src="logo.png" width="200px">
+                              </div>
+                              <div class="footercol3">
+                                  <h3>Usefull links</h3>
+                                  <ul>
+                          <a href="privacy.html"><li>Privacy Policy</li></a>
+                          <a href=""><li>Terms of Use</li></a>
+                          <a href=""><li>Sales and Refunds</li></a>
+                          <a href=""><li>Legal</li></a>
+                                  </ul>
+                              </div>
+                              <div class="footercol4">
+                                  <h3>Follow us</h3>
+                                  <ul>
+                          <a href=""><li>Facebook</li></a>
+                          <a href=""><li>TikTok</li></a>
+                          <a href=""><li>Instagram</li></a>
+                          <a href=""><li>YouTube</li></a>
+                                  </ul>
+                              </div>
+                          </div>
+                          <hr>
+                          <p class="copy">Copyright © 2021 Bilim Inc. All rights reserved.</p>
+                      </div>
+                  </div>
+
+                  <!-- FOOTER -->
+                
+                     
+
+                </body>
+</html>
